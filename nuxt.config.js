@@ -46,6 +46,8 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend (config, ctx) {
+      config.resolve.alias.vue$ = require.resolve('vue/dist/vue.esm.js')
+    }
   }
 }

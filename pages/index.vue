@@ -3,18 +3,27 @@
     <h1>Vue-live test</h1>
     <div>
       <no-ssr>
-        <vue-live :code="`<input type='button' value='button' />`" />
+        <vue-live
+          :code="'<span>test</span>'"
+          :components="registeredComponents"
+        />
       </no-ssr>
     </div>
   </div>
 </template>
 
 <script>
-import VueLive from 'vue-live'
+import { VueLive } from 'vue-live'
+import Logo from '~/components/Logo'
 
 export default {
   components: {
     VueLive
+  },
+  data() {
+    return {
+      registeredComponents: { Logo }
+    }
   }
 }
 </script>
