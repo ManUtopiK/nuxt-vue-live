@@ -1,18 +1,17 @@
 <template>
   <div class="container">
-    <h1>Vue-live test</h1>
-    <div>
-      <no-ssr>
-        <vue-live
-          :code="'<span>test</span>'"
-          :components="registeredComponents"
-        />
-      </no-ssr>
+    <div class="middlebox">
+      <h1>Vue-live test</h1>
+      <vue-live
+        :code="'<span>test</span> <Logo />'"
+        :components="registeredComponents"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import 'prismjs/themes/prism-tomorrow.css'
 import { VueLive } from 'vue-live'
 import Logo from '~/components/Logo'
 
@@ -36,6 +35,10 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.middlebox {
+  width: 800px;
 }
 
 .title {
