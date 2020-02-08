@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "vue-live": "^1.4.4"
+    "vue-live": "^1.5.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
